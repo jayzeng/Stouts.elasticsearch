@@ -436,6 +436,14 @@ discovery.zen.ping.unicast.hosts: {{ elasticsearch_discovery_zen_ping_unicast_ho
 # See <http://elasticsearch.org/tutorials/2011/08/22/elasticsearch-on-ec2.html>
 # for a step-by-step tutorial.
 
+# Configure AWS Plugin
+cloud.aws.access_key: {{ elasticsearch_plugin_aws_access_key }}
+cloud.aws.secret_key: {{ elasticsearch_plugin_aws_secret_key }}
+cloud.node.auto_attributes: true
+
+discovery.ec2.groups: {{ elasticsearch_plugin_aws_ec2_groups }}
+discovery.ec2.ping_timeout: {{ elasticsearch_plugin_aws_ec2_ping_timeout }}
+
 # Fault Discovery
 # See <http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/modules-discovery-zen.html#fault-detection>
 {% if elasticsearch_discovery_zen_fd_ping_interval is defined %}
