@@ -97,7 +97,6 @@ See [https://github.com/elasticsearch/elasticsearch-cloud-aws](https://github.co
 
 The following variables provide a for now limited configuration for the plugin. More options may be available in the future (see [http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/modules-discovery-ec2.html)](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/modules-discovery-ec2.html)):
 
-- elasticsearch_plugin_aws_ec2_discovery_type
 - elasticsearch_plugin_aws_ec2_groups
 - elasticsearch_plugin_aws_ec2_ping_timeout
 - elasticsearch_plugin_aws_access_key
