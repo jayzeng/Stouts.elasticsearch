@@ -384,6 +384,11 @@ indices.recovery.concurrent_streams: {{ elasticsearch_recovery_concurrent_stream
 
 # Discovery infrastructure ensures nodes can be found within a cluster
 # and master node is elected. Multicast discovery is the default.
+#
+# discovery.type: ec2
+{% if elasticsearch_plugin_aws_ec2_discovery_type is defined %}
+discovery.zen.ping.timeout: {{ elasticsearch_plugin_aws_ec2_discovery_type }}
+{% endif %}
 
 # Set to ensure a node sees N other master eligible nodes to be considered
 # operational within the cluster. Set this option to a higher value (2-4)
