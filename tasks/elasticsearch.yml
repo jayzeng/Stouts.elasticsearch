@@ -7,6 +7,9 @@
 - include: configure.yml
   tags: [elasticsearch, elasticsearch-configure]
 
+- include: aws.yml
+  tags: [elasticsearch, elasticsearch-plugins, aws]
+
 - include: plugins.yml
   tags: [elasticsearch, elasticsearch-plugins]
 
