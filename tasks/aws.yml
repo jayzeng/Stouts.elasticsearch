@@ -1,6 +1,17 @@
---2014-09-09 18:02:55--  https://github.com/knockrentals/Deploy/blob/069e1762228160ee7d151441fad3404484da7ea0/deployments/services/search/roles/jayzeng.Stouts_elasticsearch-aws/tasks/aws.yml
-Resolving github.com... 192.30.252.131
-Connecting to github.com|192.30.252.131|:443... connected.
-HTTP request sent, awaiting response... 404 Not Found
-2014-09-09 18:02:56 ERROR 404: Not Found.
-
+---
+# Install AWS Plugin (see https://github.com/elasticsearch/elasticsearch-cloud-aws)
+#
+# The following variables need to be defined in your playbook or inventory:
+# - elasticsearch_plugin_aws_version
+#
+# The following variables provide a for now limited configuration for the plugin.
+# More options may be available in the future.
+# (see http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/modules-discovery-ec2.html):
+# - elasticsearch_plugin_aws_ec2_groups
+# - elasticsearch_plugin_aws_ec2_ping_timeout
+# - elasticsearch_plugin_aws_access_key
+# - elasticsearch_plugin_aws_secret_key
+- name: Installing AWS Plugin
+  action: >
+    shell bin/plugin -install elasticsearch/elasticsearch-cloud-aws/{{ elasticsearch_plugin_aws_version }}
+    chdir={{ elasticsearch_home }}
