@@ -1,7 +1,7 @@
 Stouts.elasticsearch
 ====================
 
-[![Build Status](https://travis-ci.org/Stouts/Stouts.elasticsearch.png)](https://travis-ci.org/Stouts/Stouts.elasticsearch)
+[![Build Status](https://travis-ci.org/knockrentals/Stouts.elasticsearch.png)](https://travis-ci.org/knockrentals/Stouts.elasticsearch)
 
 Ansible role for manage [Elasticsearch](www.elasticsearch.org)
 
