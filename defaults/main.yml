@@ -20,3 +20,8 @@ elasticsearch_plugins: []                       # Manage elasticsearch plugins (
                                                 #         url: <optional plugin url>
                                                 #         remove: yes # Optional the plugin will be removed
 elasticsearch_max_open_files: 65535
+
+# Http basic auth
+http_basic_version: 1.3.2
+http_basic_enabled: true
+http_basic_log: true
