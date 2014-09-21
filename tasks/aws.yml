@@ -11,7 +11,12 @@
 # - elasticsearch_plugin_aws_ec2_ping_timeout
 # - elasticsearch_plugin_aws_access_key
 # - elasticsearch_plugin_aws_secret_key
+- name: check if AWS Plugin is installed
+  stat: path={{ elasticsearch_plugindir }}/cloud-aws
+  register: aws_plugin_installed
+
 - name: Installing AWS Plugin
   action: >
     shell bin/plugin -install elasticsearch/elasticsearch-cloud-aws/{{ elasticsearch_plugin_aws_version }}
     chdir={{ elasticsearch_home }}
+  when: not aws_plugin_installed.stat.exists

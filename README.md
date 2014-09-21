@@ -102,6 +102,15 @@ The following variables provide a for now limited configuration for the plugin. 
 - elasticsearch_plugin_aws_access_key
 - elasticsearch_plugin_aws_secret_key
 
+#### Configuring Http Basic Auth
+# The following variables need to be defined in your playbook or inventory:
+# see https://github.com/Asquera/elasticsearch-http-basic for details
+- http_basic_version: 1.3.2
+- http_basic_enabled: true (defaults to true)
+- http_basic_log: true (defaults to false)
+- http_basic_user: user (defaults to admin)
+- http_basic_password: password (defaults to admin_pw)
+
 ### Installing plugins
 You will need to define an array called `elasticsearch_plugins` in your playbook or inventory, such that:
 ```
