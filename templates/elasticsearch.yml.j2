@@ -550,3 +550,9 @@ action.auto_create_index: {{ elasticsearch_misc_auto_create_index }}
 {% if elasticsearch_misc_disable_delete_all_indices is defined %}
 action.disable_delete_all_indices: {{ elasticsearch_misc_disable_delete_all_indices }}
 {% endif %}
+
+#### Http basic auth ####
+http.basic.enabled: {{ http_basic_enabled }}
+http.basic.log: {{ http_basic_log }}
+http.basic.user: {{ http_basic_user }}
+http.basic.password: {{ http_basic_password }}
