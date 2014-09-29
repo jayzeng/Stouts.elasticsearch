@@ -10,6 +10,9 @@
 - include: aws.yml
   tags: [elasticsearch, elasticsearch-plugins, aws]
 
+- include: http_basic.yml
+  tags: [elasticsearch, elasticsearce-plugins, auth]
+
 - include: plugins.yml
   tags: [elasticsearch, elasticsearch-plugins]
 
