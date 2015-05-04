@@ -105,7 +105,7 @@ The following variables provide a for now limited configuration for the plugin. 
 #### Configuring Http Basic Auth
 # The following variables need to be defined in your playbook or inventory:
 # see https://github.com/Asquera/elasticsearch-http-basic for details
-- http_basic_version: 1.3.2
+- http_basic_version: 1.4.0
 - http_basic_enabled: true (defaults to true)
 - http_basic_log: true (defaults to false)
 - http_basic_user: user (defaults to admin)
