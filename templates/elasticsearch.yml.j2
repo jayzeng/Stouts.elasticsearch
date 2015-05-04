@@ -514,6 +514,12 @@ index.indexing.slowlog.threshold.index.debug: {{ elasticsearch_slowlog_threshold
 index.indexing.slowlog.threshold.index.trace: {{ elasticsearch_slowlog_threshold_index_trace }}
 {% endif %}
 
+#dynamic scripting
+{% if elasticsearch_disable_dynamic_scripting is defined %}
+script.disable_dynamic: {{ elasticsearch_disable_dynamic_scripting }}
+{% endif %}
+
+
 ################################## GC Logging ################################
 
 #monitor.jvm.gc.ParNew.warn: 1000ms
@@ -552,7 +558,15 @@ action.disable_delete_all_indices: {{ elasticsearch_misc_disable_delete_all_indi
 {% endif %}
 
 #### Http basic auth ####
+{% if http_basic_enabled is defined %}
 http.basic.enabled: {{ http_basic_enabled }}
+{% endif %}
+{% if http_basic_log is defined %}
 http.basic.log: {{ http_basic_log }}
+{% endif %}
+{% if http_basic_user is defined %}
 http.basic.user: {{ http_basic_user }}
+{% endif %}
+{% if http_basic_password is defined %}
 http.basic.password: {{ http_basic_password }}
+{% endif %}
